@@ -25,7 +25,7 @@ app.get('/getDefinition/:acronym', (req, res) => {
                     } else {
                         word = getWord(nouns, acronym[i]);
                     }
-                    finalDefinition.push(word.charAt(0).toUpperCase() + word.slice(1));
+                    word && finalDefinition.push(word.charAt(0).toUpperCase() + word.slice(1));
                 }
                 res.send({ word: finalDefinition.join(' ') });
             });
