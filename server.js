@@ -36,7 +36,7 @@ app.get('/getDefinition/:acronym', (req, res) => {
 });
 
 var server = app.listen(process.env.PORT, function () {
-   var host = server.address().address
-   var port = server.address().port
-   console.log("Dumb Acronym app listening at http://%s:%s", host, port)
+   var host = server.address().address;
+   var port = server.address().port;
+   console.log("Dumb Acronym API is listening at http://%s:%s", host, port)
 });
